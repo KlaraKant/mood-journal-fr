@@ -1,0 +1,1 @@
+console.log("Mood Journal spuštěn.");
