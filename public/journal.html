@@ -2,50 +2,36 @@
 <html lang="cs">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Mood Journal | Deník</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link id="theme-style" rel="stylesheet" href="css/style-light.css">
-
 </head>
 
 <body>
 
 <header class="site-header">
 
-<div class="container">
+    <div class="container">
 
-<h1>Mood Journal</h1>
+        <h1>Mood Journal</h1>
 
-<nav>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Domů</a></li>
+                <li><a class="active" href="journal.html">Deník</a></li>
+                <li><a href="calendar.html">Kalendář</a></li>
+                <li><a href="statistics.html">Statistiky</a></li>
+                <li><a href="about.html">O projektu</a></li>
+            </ul>
+        </nav>
 
-<ul class="nav-menu">
-
-<li><a href="index.html">Domů</a></li>
-
-<li><a class="active" href="journal.html">Deník</a></li>
-
-<li><a href="calendar.html">Kalendář</a></li>
-
-<li><a href="statistics.html">Statistiky</a></li>
-
-<li><a href="about.html">O projektu</a></li>
-
-</ul>
-
-</nav>
-
-</div>
+    </div>
 
 </header>
 
@@ -60,25 +46,21 @@
 <div class="mood-selector">
 
 <button type="button" class="mood-btn">😊</button>
-
 <button type="button" class="mood-btn">😄</button>
-
 <button type="button" class="mood-btn">😐</button>
-
 <button type="button" class="mood-btn">😔</button>
-
 <button type="button" class="mood-btn">😡</button>
-
 <button type="button" class="mood-btn">😴</button>
 
 </div>
+
+<input type="hidden" id="selectedMood" required>
 
 <label for="date">Datum</label>
 
 <input
 type="date"
 id="date"
-name="date"
 required>
 
 <label for="title">Nadpis</label>
@@ -86,7 +68,6 @@ required>
 <input
 type="text"
 id="title"
-name="title"
 placeholder="Např. Skvělý den"
 required>
 
@@ -98,9 +79,9 @@ Dnešní myšlenky
 
 <textarea
 id="entry"
-name="entry"
 rows="7"
-placeholder="Co se dnes stalo?"></textarea>
+placeholder="Co se dnes stalo?"
+required></textarea>
 
 <button type="submit">
 
