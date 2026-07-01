@@ -1,50 +1,159 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mood Journal | Deník</title>
 
-    <link id="theme-style" rel="stylesheet" href="css/style-light.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link id="theme-style" rel="stylesheet" href="css/style-light.css">
+
 </head>
 
 <body>
 
-    <header class="site-header">
-        <div class="container">
+<header class="site-header">
 
-            <h1>Mood Journal</h1>
+<div class="container">
 
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="journal.html">Deník</a></li>
-                </ul>
-            </nav>
+<h1>Mood Journal</h1>
 
-        </div>
-    </header>
+<nav>
 
-    <main class="container">
+<ul class="nav-menu">
 
-        <section>
-            <h2>Deník</h2>
+<li><a href="index.html">Domů</a></li>
 
-            <p>Zde bude formulář pro přidávání nových zápisků.</p>
+<li><a class="active" href="journal.html">Deník</a></li>
 
-        </section>
+<li><a href="calendar.html">Kalendář</a></li>
 
-    </main>
+<li><a href="statistics.html">Statistiky</a></li>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 Mood Journal</p>
-        </div>
-    </footer>
+<li><a href="about.html">O projektu</a></li>
 
-    <script type="module" src="js/journal.js"></script>
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<main class="container">
+
+<section class="journal-page">
+
+<h2>Jak se dnes cítíš?</h2>
+
+<form id="journalForm">
+
+<div class="mood-selector">
+
+<button type="button" class="mood-btn">😊</button>
+
+<button type="button" class="mood-btn">😄</button>
+
+<button type="button" class="mood-btn">😐</button>
+
+<button type="button" class="mood-btn">😔</button>
+
+<button type="button" class="mood-btn">😡</button>
+
+<button type="button" class="mood-btn">😴</button>
+
+</div>
+
+<label for="date">Datum</label>
+
+<input
+type="date"
+id="date"
+name="date"
+required>
+
+<label for="title">Nadpis</label>
+
+<input
+type="text"
+id="title"
+name="title"
+placeholder="Např. Skvělý den"
+required>
+
+<label for="entry">
+
+Dnešní myšlenky
+
+</label>
+
+<textarea
+id="entry"
+name="entry"
+rows="7"
+placeholder="Co se dnes stalo?"></textarea>
+
+<button type="submit">
+
+Uložit zápisek
+
+</button>
+
+</form>
+
+</section>
+
+<section class="entries">
+
+<h2>Poslední zápisky</h2>
+
+<div id="entriesContainer">
+
+<div class="entry-card">
+
+<h3>😊 Skvělý den</h3>
+
+<p class="entry-date">
+
+15. 6. 2026
+
+</p>
+
+<p>
+
+Tady se později zobrazí uložené zápisky z Firebase.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+
+<div class="container">
+
+<p>&copy; 2026 Mood Journal</p>
+
+</div>
+
+</footer>
+
+<script type="module" src="js/journal.js"></script>
 
 </body>
+
 </html>
